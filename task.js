@@ -101,12 +101,12 @@ $.getJSON("./epg_data.json", function(data) {
 
 		// remove added show from tempShows for further processing
 		var index = tempShows.indexOf(closestEndTimeShow);
-	    if (index > -1) {
-	       tempShows.splice(index, 1);
-	    }
+	    	if (index > -1) {
+	       		tempShows.splice(index, 1);
+	    	}
 
-	    // filter shows that have the start time later than the added show to avoid overlapping shows
-	    tempShows = tempShows.filter(function (show) {
+	    	// filter shows that have the start time later than the added show to avoid overlapping shows
+	    	tempShows = tempShows.filter(function (show) {
 			return show.start >= closestEndTimeShow.end
 		});
 	};
@@ -122,10 +122,8 @@ $.getJSON("./epg_data.json", function(data) {
 	    var element = document.createElement('a');
 		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(showSequence)));
 		element.setAttribute('download', "task1_sequence.json");
-
 		element.style.display = 'none';
 		document.body.appendChild(element);
-
 		element.click();
 		element.remove();
 	}
@@ -135,10 +133,8 @@ $.getJSON("./epg_data.json", function(data) {
 	    var element = document.createElement('a');
 		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(showSequenceMaximised)));
 		element.setAttribute('download', "task2_sequence_maximized.json");
-
 		element.style.display = 'none';
 		document.body.appendChild(element);
-
 		element.click();
 		element.remove();
 	}
