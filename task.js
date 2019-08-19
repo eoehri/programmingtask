@@ -127,6 +127,7 @@ $.getJSON("./epg_data.json", function(data) {
 		document.body.appendChild(element);
 
 		element.click();
+		element.remove();
 	}
 
 	var task2ResultsButton = document.getElementById('task2results');
@@ -139,5 +140,6 @@ $.getJSON("./epg_data.json", function(data) {
 		document.body.appendChild(element);
 
 		element.click();
+		element.remove();
 	}
 });
