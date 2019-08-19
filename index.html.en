@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="task.js"></script>
+</head>
+<body>
+	<h1>Hello ambrite people!</h1>
+	<br>
+
+	<a href="epg_data.json" download="dataset">Download dataset</a>
+
+	<h3>Task 1</h3>
+	<p>Find a sequence of non-overlapping programs that fit the users interests 
+	and are playing between the start and end timestamps</p>
+	<button id='task1results'>Download Results</button>
+	<br>
+
+	<h3>Task 2</h3>
+	<p>Find a sequence of non-overlapping programs that fit the users interests 
+	and are playing between the start and end timestamps, for which the number of times the user changes a channel is maximized</p>
+	<button id='task2results'>Download Results</button>
+</body>
+</html>
