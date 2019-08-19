@@ -46,8 +46,8 @@ $.getJSON("./epg_data.json", function(data) {
  	// filter shows that are playing/starting in the given timeframe and are matching the user's interest
 	var showsFiltered = shows.filter(function (show) {
 		return 	show.start >= start 
-				&& show.start < end 
-				&& interests.some(function(interest) {return show.categories.toLowerCase().indexOf(interest) >= 0; });
+			&& show.start < end 
+			&& interests.some(function(interest) {return show.categories.toLowerCase().indexOf(interest) >= 0; });
 	});
 
 	// sort shows ascending based on start time
@@ -119,7 +119,7 @@ $.getJSON("./epg_data.json", function(data) {
 	***************************************************************************/
 	var task1ResultsButton = document.getElementById('task1results');
 	task1ResultsButton.onclick = function() {
-	    var element = document.createElement('a');
+	    	var element = document.createElement('a');
 		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(showSequence)));
 		element.setAttribute('download', "task1_sequence.json");
 		element.style.display = 'none';
@@ -130,7 +130,7 @@ $.getJSON("./epg_data.json", function(data) {
 
 	var task2ResultsButton = document.getElementById('task2results');
 	task2ResultsButton.onclick = function() {
-	    var element = document.createElement('a');
+		var element = document.createElement('a');
 		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(showSequenceMaximised)));
 		element.setAttribute('download', "task2_sequence_maximized.json");
 		element.style.display = 'none';
