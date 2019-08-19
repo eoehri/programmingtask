@@ -81,7 +81,6 @@ $.getJSON("./epg_data.json", function(data) {
 	showSequenceMaximised = [];
 
 	while (tempShows.length !== 0) {
-
 		// filter shows that have a channel other than the previous one in the sequence
 		if (showSequenceMaximised.length !== 0) {
 			otherChannelShows = tempShows.filter(function (show) {
